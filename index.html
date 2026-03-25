@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+            transition: 0.3s;
+        }
+        .dark {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #eee;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 32px;
+        }
+        header p {
+            margin: 3px 0;
+            opacity: 0.95;
+        }
+
+        button {
+            padding: 6px 12px;
+            margin: 8px 5px;
+            cursor: pointer;
+            border: none;
+            background: #0077b5;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #005f8e;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .dark section {
+            background: #1e1e1e;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #4facfe;
+            color: white;
+        }
+
+        .projects-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .card {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            width: 220px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .dark .card {
+            background: #2a2a2a;
+        }
+
+        .tags {
+            margin-top: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 3px 8px;
+            margin: 2px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .dark .tag {
+            background: #444;
+        }
+
+        .status {
+            font-size: 12px;
+            padding: 3px 6px;
+            border-radius: 4px;
+            float: right;
+        }
+        .completed {
+            background: #4caf50;
+            color: white;
+        }
+        .ongoing {
+            background: #ff9800;
+            color: white;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 250px;
+        }
+        .about-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4facfe;
+        }
+
+        .socials {
+            text-align: center;
+            margin: 20px 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+        .dark .socials {
+            background: #1e1e1e;
+        }
+        .socials h2 {
+            border: none;
+            margin-bottom: 10px;
+        }
+        .socials a {
+            margin: 10px;
+            font-size: 26px;
+            color: #333;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .socials a:hover {
+            color: #0077b5;
+        }
+        .dark .socials a {
+            color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Uday Singh</h1>
+    <p>B.Tech CSE (Core) Student</p>
+    <p>VIT Vellore</p>
+
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-text">
+            <p>
+                I am a B.Tech Computer Science (Core) student at VIT Vellore with a strong interest in programming and problem-solving. 
+                I work with C and Python and have a solid foundation in data structures and web development.
+            </p>
+            <p>
+                I focus on building practical projects and improving my coding efficiency while exploring real-world applications.
+            </p>
+        </div>
+        <img src="https://drive.google.com/uc?export=view&id=1eZ907tx_Nr8czl1dCLk2AmbiWQ2Q-zRe" alt="Profile Photo" class="about-photo">
+    </div>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <div class="projects-container">
+        <div class="card">C Programming</div>
+        <div class="card">Python Programming</div>
+        <div class="card">Data Structures</div>
+        <div class="card">Basic Web Development</div>
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="card">
+            <span class="status completed">Completed</span>
+            <h3>Calculator in C</h3>
+            <p>Basic calculator using C language.</p>
+            <div class="tags">
+                <span class="tag">C</span>
+                <span class="tag">Basics</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="status completed">Completed</span>
+            <h3>Shopping Cart System</h3>
+            <p>Design and development of a supermarket shopping cart system.</p>
+            <div class="tags">
+                <span class="tag">Group</span>
+                <span class="tag">Design</span>
+                <span class="tag">Python</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="status ongoing">Ongoing</span>
+            <h3>Smart Road Infrastructure Intelligence System</h3>
+            <p>Ongoing group project focused on intelligent road infrastructure and monitoring.</p>
+            <div class="tags">
+                <span class="tag">Group</span>
+                <span class="tag">IoT</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="socials">
+    <h2>Professional Profiles</h2>
+    <a href="https://github.com/uday221207singh-ship-it" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/uday-singh-139a273b9/?skipRedirect=true" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: <span id="email">uday221207singh@gmail.com</span></p>
+    <button onclick="copyEmail()">Copy Email</button>
+    <p>Phone no.: +91 9773779710</p>
+</section>
+
+<footer>
+    <p>© 2026 Uday Singh</p>
+</footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+
+    function copyEmail() {
+        const email = document.getElementById("email").innerText;
+        navigator.clipboard.writeText(email);
+        alert("Email copied!");
+    }
+</script>
+
+</body>
+</html>
